@@ -1,0 +1,49 @@
+﻿### FANER ###
+stue:
+  name: Stue
+  view: yes
+  entities:
+    - group.stue_gruppe
+
+upstairs:
+  name: 1. Sal
+  view: yes
+  entities:
+    - group.ovenpaa_gruppe
+
+vejret_gruppe:
+  name: Vejret
+  view: yes
+  entities:
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.yr_wind_direction
+    - sensor.yr_wind_speed
+    - sensor.yr_precipitation
+    - sensor.yr_humidity
+    - sensor.yr_dewpoint_temperature
+    - sensor.yr_pressure
+    - sensor.yr_cloudiness
+    - sensor.yr_low_clouds
+    - sensor.yr_medium_clouds
+    - sensor.yr_high_clouds
+    - sensor.yr_fog
+
+### GRUPPER / KORT ###
+stue_gruppe:
+  name: Stuen
+  view: no
+  entities:
+    - switch.sofaen
+    - light.lnestol
+    - light.spisestuen
+    - media_player.stuetv_ue55es8005
+    - media_player.stuen
+    - switch.tv
+
+ovenpaa_gruppe:
+  name: 1. sal
+  view: no
+  entities:
+    - light.amalies_vrelse
+    - media_player.alrum

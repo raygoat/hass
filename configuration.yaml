@@ -1,0 +1,77 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 1
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Copenhagen
+
+  customize:
+    media_player.stuetv_ue55es8005:
+      friendly_name: Stue TV
+    media_player.samsung_led46_ue46f5500:
+      friendly_name: Alrum TV
+    media_player.stuen:
+      friendly_name: Sonos i Stuen
+    media_player.alrum:
+      friendly_name: Sonos i Alrummet
+    media_player.kkken:
+      friendly_name: Sonos i Køkkenet
+    # WeMo Switches -> lamper
+    switch.sofaen:
+      friendly_name: Sofalys
+      icon: mdi:lightbulb
+    switch.tv:
+      friendly_name: TV i stuen
+      icon: mdi:television
+
+### HARMONY ###
+remote:
+  - platform: harmony
+    name: Harmony i Stuen
+    host: 192.168.1.225
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  - platform: yr
+
+# Text to speech
+tts:
+  platform: google
+
+group: !include groups.yaml
