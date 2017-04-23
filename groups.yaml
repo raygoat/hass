@@ -11,7 +11,7 @@ upstairs:
   entities:
     - group.ovenpaa_gruppe
 
-vejret_gruppe:
+vejret:
   name: Vejret
   view: yes
   entities:
