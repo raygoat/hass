@@ -30,6 +30,45 @@ homeassistant:
       friendly_name: TV i stuen
       icon: mdi:television
 
+    # YR Tilpasninger
+    sensor.yr_symbol:
+      friendly_name: Vejret lige nu
+    sensor.yr_temperature:
+      friendly_name: Temperatur
+    sensor.yr_wind_direction:
+      friendly_name: Vindretning
+      icon: mdi:compass-outline
+    sensor.yr_wind_speed:
+      friendly_name: Vindstyrke
+      icon: mdi:weather-windy
+    sensor.yr_precipitation:
+      friendly_name: Nedbør
+      icon: mdi:weather-snowy-rainy
+    sensor.yr_humidity:
+      friendly_name: Fugtighed
+      icon: mdi:water-percent
+    sensor.yr_pressure:
+      friendly_name: Lufttryk
+      icon: mdi:nuke
+    sensor.yr_fog:
+      friendly_name: Tåge
+      icon: mdi:weather-fog
+    sensor.yr_cloudiness:
+      friendly_name: Skydække
+      icon: mdi:weather-partlycloudy
+    sensor.yr_low_clouds:
+      friendly_name: Lave skyer
+      icon: mdi:weather-cloudy
+    sensor.yr_medium_clouds:
+      friendly_name: Mellemhøje skyer
+      icon: mdi:weather-cloudy
+    sensor.yr_high_clouds:
+      friendly_name: Høje skyer
+      icon: mdi:weather-cloudy
+    sensor.yr_dewpoint_temperature:
+      friendly_name: Dugpunkt
+
+      
 ### HARMONY ###
 remote:
   - platform: harmony
@@ -89,3 +128,13 @@ tts:
   platform: google
 
 group: !include groups.yaml
+
+panel_iframe:
+  waoo:
+    title: 'Router'
+    url: 'http://192.168.1.254'
+    icon: mdi:router-wireless
+  cam:
+    title: 'webcam'
+    url: 'http://192.168.1.122'
+    icon: mdi:camcorder

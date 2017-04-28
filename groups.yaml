@@ -1,19 +1,56 @@
 ### FANER ###
-stue:
+livingroom:
   name: Stue
   view: yes
   entities:
-    - group.stue_gruppe
+    - group.livingroom_group
+
+kitchen:
+  name: Køkken
+  view: yes
+  entities:
+    - group.kitchen_group
 
 upstairs:
   name: 1. Sal
   view: yes
   entities:
-    - group.ovenpaa_gruppe
+    - group.upstairs_group
 
-vejret:
+weather:
   name: Vejret
   view: yes
+  entities:
+    - group.weather_group
+
+### GRUPPER / KORT ###
+livingroom_group:
+  name: Stuen
+  view: no
+  entities:
+    - switch.sofaen
+    - light.lnestol
+    - light.spisestuen
+    - media_player.stuetv_ue55es8005
+    - media_player.stuen
+
+kitchen_group:
+  name: Køkken
+  view: no
+  entities:
+    - light.kkken
+    - media_player.kkken
+
+upstairs_group:
+  name: 1. sal
+  view: no
+  entities:
+    - light.amalies_vrelse
+    - media_player.alrum
+
+weather_group:
+  name: Vejret
+  view: no
   entities:
     - sensor.yr_symbol
     - sensor.yr_temperature
@@ -29,21 +66,3 @@ vejret:
     - sensor.yr_high_clouds
     - sensor.yr_fog
 
-### GRUPPER / KORT ###
-stue_gruppe:
-  name: Stuen
-  view: no
-  entities:
-    - switch.sofaen
-    - light.lnestol
-    - light.spisestuen
-    - media_player.stuetv_ue55es8005
-    - media_player.stuen
-    - switch.tv
-
-ovenpaa_gruppe:
-  name: 1. sal
-  view: no
-  entities:
-    - light.amalies_vrelse
-    - media_player.alrum
