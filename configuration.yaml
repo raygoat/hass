@@ -68,13 +68,16 @@ homeassistant:
     sensor.yr_dewpoint_temperature:
       friendly_name: Dugpunkt
 
-      
+### WeMo ###
+wemo:
+
 ### HARMONY ###
 remote:
   - platform: harmony
     name: Harmony i Stuen
     host: !secret harmony
-
+    scan_interval: 120
+    
 # Enables the frontend
 frontend:
 
@@ -134,3 +137,15 @@ panel_iframe:
     title: 'webcam'
     url: !secret webcam
     icon: mdi:camcorder
+    
+ifttt:
+  key: !secret ifttt
+  
+camera:
+  - platform: generic
+    name: WebCam
+    still_image_url: http://192.168.1.122/image/jpeg.cgi
+    username: jpeg
+    password: jpeg
+    
+  

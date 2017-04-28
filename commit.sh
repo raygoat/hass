@@ -1,7 +1,7 @@
 #!/bin/bash
 # Skifter til bruger Home Assistant
 
-cd /home/homeassistant/.homeassistant
+#cd /home/homeassistant/.homeassistant
 git add -A
 if [ $# -eq 0 ]
 then
