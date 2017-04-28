@@ -73,7 +73,7 @@ homeassistant:
 remote:
   - platform: harmony
     name: Harmony i Stuen
-    host: 192.168.1.225
+    host: !secret harmony
 
 # Enables the frontend
 frontend:
@@ -130,11 +130,7 @@ tts:
 group: !include groups.yaml
 
 panel_iframe:
-  waoo:
-    title: 'Router'
-    url: 'http://192.168.1.254'
-    icon: mdi:router-wireless
   cam:
     title: 'webcam'
-    url: 'http://192.168.1.122'
+    url: !secret webcam
     icon: mdi:camcorder
