@@ -26,9 +26,11 @@ homeassistant:
     switch.sofaen:
       friendly_name: Sofalys
       icon: mdi:lightbulb
-    switch.tv:
-      friendly_name: TV i stuen
-      icon: mdi:television
+#    switch.tv:
+#      friendly_name: TV i stuen
+#      icon: mdi:television
+    device_tracker.iphone:
+      friendly_name: Lilli
 
     # YR Tilpasninger
     sensor.yr_symbol:
@@ -68,16 +70,6 @@ homeassistant:
     sensor.yr_dewpoint_temperature:
       friendly_name: Dugpunkt
 
-### WeMo ###
-wemo:
-
-### HARMONY ###
-remote:
-  - platform: harmony
-    name: Harmony i Stuen
-    host: !secret harmony
-    scan_interval: 120
-    
 # Enables the frontend
 frontend:
 
@@ -125,7 +117,7 @@ sensor:
       - mediumClouds
       - highClouds
       - dewpointTemperature
-      
+
 # Text to speech
 tts:
   platform: google
@@ -137,15 +129,31 @@ panel_iframe:
     title: 'webcam'
     url: !secret webcam
     icon: mdi:camcorder
-    
+
 ifttt:
   key: !secret ifttt
-  
+
 camera:
   - platform: generic
     name: WebCam
     still_image_url: http://192.168.1.122/image/jpeg.cgi
     username: jpeg
     password: jpeg
-    
-  
+
+### HARMONY ###
+remote:
+  - platform: harmony
+    name: Harmony i Stuen
+    host: !secret harmony
+    scan_interval: 120
+
+device_tracker:
+  - platform: icloud
+    username: !secret iCloud-username
+    password: !secret iCloud-password
+    account_name: Lilli
+
+wemo:
+  static:
+    - 192.168.1.137
+#    - 192.168.1.241
